@@ -1,0 +1,8 @@
+﻿**/.venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.streamlit/
+digit_recognition_app_dec2025/.venv/
+digit_recognition_app_dec2025/__pycache__/
