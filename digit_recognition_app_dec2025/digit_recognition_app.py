@@ -2,6 +2,7 @@
 Digit Recognition Streamlit App
 A simple application for digit recognition using ensemble of CNN and OCR models.
 """
+import os
 import streamlit as st
 import streamlit_sal as sal
 from streamlit_sal import sal_stylesheet
@@ -33,6 +34,11 @@ st.set_page_config(
 def start_streamlit():
     """Main Streamlit app function"""
     # Wraps the application with a SAL stylesheet so elements within it can be customized
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    original_cwd = os.getcwd()
+    if os.getcwd() != script_dir:
+        os.chdir(script_dir)
+        
     with sal_stylesheet():
         render_app_header()
 
